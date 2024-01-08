@@ -34,7 +34,7 @@
 
 .task__element_field {
   width: 56%;
-  display: inline-block;
+  display: none;
   flex-grow: 1;
 }
 
@@ -122,10 +122,6 @@ label[for="new-task"] {
   flex-grow: 1;
 }
 
-.task__element_field {
-  width: 226px;
-}
-
 .task__element_delete img {
   height: 2em;
   transform: rotateZ(45deg);
@@ -143,8 +139,9 @@ label[for="new-task"] {
 }
 
 /* Edit Task */
-.task__element_field.hidden {
-  display: none;
+#new-task.task__element_field,
+.task__element.edit-mode .task__element_field {
+  display: inline-block;
 }
 
 .task__element.edit-mode label {
