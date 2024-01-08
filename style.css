@@ -5,14 +5,14 @@
   font-family: Lato, sans-serif;
 }
 
-.aaa {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.header__image {
   width: 100%;
 }
 
@@ -43,11 +43,6 @@ ul {
   padding: 0px;
 }
 
-li,
-h3 {
-  list-style: none;
-}
-
 input,
 button {
   outline: none;
@@ -68,7 +63,7 @@ button:hover {
 }
 
 /* Heading */
-h3,
+h2,
 label[for="new-task"] {
   color: #333;
   font-weight: 700;
@@ -108,10 +103,10 @@ label[for="new-task"] {
 
 /* Task list */
 .task__element {
+  list-style: none;
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
