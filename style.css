@@ -21,7 +21,7 @@
 }
 
 @media (max-width: 768px) {
-  .aaa {
+  .header {
     text-align: center;
   }
 }
@@ -43,12 +43,8 @@ ul {
   padding: 0px;
 }
 
-input,
-button {
+.task__element_button {
   outline: none;
-}
-
-button {
   background: none;
   border: 0px;
   color: #888;
@@ -58,13 +54,12 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.task__element_button:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-h2,
-label[for="new-task"] {
+.section__header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -74,7 +69,8 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task__element_field {
+  outline: none;
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -87,18 +83,8 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task__element_field:focus {
   color: #333;
-}
-
-/* New Task */
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
-}
-
-#new-task {
-  width: 318px;
 }
 
 /* Task list */
