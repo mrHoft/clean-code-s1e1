@@ -7,10 +7,10 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-const taskInput = document.getElementById("new-task"); // Add a new task.
-const addButton = document.getElementsByTagName("button")[0]; // first button
-const incompleteTaskHolder = document.getElementById("tasks__todo"); // ul of #tasks__todo
-const completedTasksHolder = document.getElementById("tasks__complete"); // tasks__complete
+const taskInput = document.querySelector(".task__element_field-add"); // Add a new task.
+const addButton = document.querySelector(".task__element_button"); // first button
+const incompleteTaskHolder = document.querySelector(".tasks__todo"); // ul of tasks__todo
+const completedTasksHolder = document.querySelector(".tasks__complete"); //ul of tasks__complete
 
 // New task list item
 const createNewTaskElement = function (taskString) {
@@ -35,6 +35,7 @@ const createNewTaskElement = function (taskString) {
 
   // Each elements, needs appending
   checkBox.type = "checkbox";
+  checkBox.className = "task__element_checkbox";
   editInput.type = "text";
   editInput.className = "task__element_field";
 
@@ -42,6 +43,7 @@ const createNewTaskElement = function (taskString) {
   editButton.className = "task__element_button task__element_edit";
 
   deleteButton.className = "task__element_button task__element_delete";
+  deleteButtonImg.className = "task__element_delete-img";
   deleteButtonImg.src = "./remove.svg";
   deleteButtonImg.alt = "";
   deleteButton.appendChild(deleteButtonImg);
@@ -56,8 +58,8 @@ const createNewTaskElement = function (taskString) {
 };
 
 const addTask = function () {
-  console.log("Add Task...");
-  // Create a new list item with the text from the #new-task:
+  console.log("Add Task...", taskInput.value);
+  // Create a new list item with the text from the "new-task":
   if (!taskInput.value) return;
   const listItem = createNewTaskElement(taskInput.value);
 
